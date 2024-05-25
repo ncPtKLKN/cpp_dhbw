@@ -3,10 +3,9 @@
 
 #include "toilet.hpp"
 
-using namespace std;
 
 
 void Toilet::visit()
 {
-   cout << this->getVisitingMessage() << " Here it smells like: " << m_smell << endl;
+   std::cout << this->getVisitingMessage() << " Here it smells like: " << m_smell << std::endl;
 }

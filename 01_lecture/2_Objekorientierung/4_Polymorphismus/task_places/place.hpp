@@ -2,8 +2,6 @@
 
 #include <string>
 
-using namespace std;
-
 
 struct Coordinate
 {
@@ -15,7 +13,7 @@ struct Coordinate
 class Place
 {
 public:
-   Place(string name, Coordinate coordinates)
+   Place(std::string name, Coordinate coordinates)
    : m_name(name)
    , m_coordinates(coordinates)
    {}
@@ -24,9 +22,9 @@ public:
 
    virtual void visit();
 
-   string getVisitingMessage();
+   std::string getVisitingMessage();
 
 private:
    Coordinate m_coordinates;
-   string m_name;
+   std::string m_name;
 };

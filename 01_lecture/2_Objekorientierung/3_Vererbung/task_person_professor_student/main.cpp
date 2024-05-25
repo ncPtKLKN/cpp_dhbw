@@ -1,34 +1,32 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 
 class Person
 {
 public:
-   Person(string name, string address, string email)
+   Person(std::string name, std::string address, std::string email)
    : m_name(name)
    , m_address(address)
    , m_email(email)
    {}
 
-   string getName()
+   std::string getName()
    {
       return m_name;
    }
 
 protected:
-   string m_name;
-   string m_address;
-   string m_email;
+   std::string m_name;
+   std::string m_address;
+   std::string m_email;
 };
 
 
 class Professor : public Person
 {
 private:
-   string m_iban;
+   std::string m_iban;
 };
 
 
@@ -42,11 +40,11 @@ private:
 class MailHandler
 {
 public:
-   void writeMail(Person receiver, string mailText)
+   void writeMail(Person receiver, std::string mailText)
    {
-      cout << "Writing Mail to: " << receiver.getName() << endl;
-      cout << "Text: " << endl;
-      cout << mailText << endl;
+      std::cout << "Writing Mail to: " << receiver.getName() << std::endl;
+      std::cout << "Text: " << std::endl;
+      std::cout << mailText << std::endl;
    }
 };
 

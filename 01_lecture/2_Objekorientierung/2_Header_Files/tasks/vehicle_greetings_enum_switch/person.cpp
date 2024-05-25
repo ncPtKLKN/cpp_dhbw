@@ -3,30 +3,29 @@
 
 #include "person.hpp"
 
-using namespace std;
 
 void Person::greet(Person person)
 {
    switch(person.m_nationality)
    {
       case Nationality::de:
-         cout << "Hallo ";
+         std::cout << "Hallo ";
          break;
       case Nationality::en:
-         cout << "Hello ";
+         std::cout << "Hello ";
          break;
       case Nationality::it:
-         cout << "Ciao ";
+         std::cout << "Ciao ";
          break;
       case Nationality::es:
-         cout << "Hola ";
+         std::cout << "Hola ";
    }
 
-   cout << person.getName() << endl;
+   std::cout << person.getName() << std::endl;
 }
 
 
-string Person::getName()
+std::string Person::getName()
 {
    return m_name;
 }

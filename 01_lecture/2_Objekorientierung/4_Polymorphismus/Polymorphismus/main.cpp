@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
 
 // Base class
 class Shape
@@ -29,7 +28,7 @@ public:
 
    void printArea()
    {
-      cout << "Total area: " << this->getArea() << endl;
+      std::cout << "Total area: " << this->getArea() << std::endl;
    }
 
 

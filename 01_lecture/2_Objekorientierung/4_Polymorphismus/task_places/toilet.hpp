@@ -4,13 +4,11 @@
 
 #include "Place.hpp"
 
-using namespace std;
-
 
 class Toilet : public Place
 {
 public:
-   Toilet(string name, Coordinate coordinate, string smell)
+   Toilet(std::string name, Coordinate coordinate, std::string smell)
    : Place(name, coordinate)
    , m_smell(smell)
    {}
@@ -18,5 +16,5 @@ public:
    void visit() override;
 
 private:
-   string m_smell;
+   std::string m_smell;
 };

@@ -29,7 +29,7 @@ private:
    std::string getColorCode();
    unsigned int m_numberOfSeats;
    Color m_color;
-   vector<Person> m_persons;
+   std::vector<Person> m_persons;
 };
 
 #endif

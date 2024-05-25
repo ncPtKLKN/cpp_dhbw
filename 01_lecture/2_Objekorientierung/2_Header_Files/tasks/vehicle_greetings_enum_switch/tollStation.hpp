@@ -12,7 +12,7 @@ public:
    : m_price(price), m_cashier("cashier", Nationality::en)
    {}
 
-   void control(vector<Vehicle> &vehicleList);
+   void control(std::vector<Vehicle> &vehicleList);
 
 private:
    double m_price;

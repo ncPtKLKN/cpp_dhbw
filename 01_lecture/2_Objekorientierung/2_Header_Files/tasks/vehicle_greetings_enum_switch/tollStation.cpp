@@ -8,7 +8,7 @@
 
 
 
-void TollStation::control(vector<Vehicle> &vehicleList)
+void TollStation::control(std::vector<Vehicle> &vehicleList)
 {
     for (Vehicle& vehicle : vehicleList)
     {

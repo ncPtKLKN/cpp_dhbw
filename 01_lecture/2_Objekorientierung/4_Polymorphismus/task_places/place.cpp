@@ -3,16 +3,14 @@
 
 #include "place.hpp"
 
-using namespace std;
-
 
 void Place::visit()
 {
-   cout << this->getVisitingMessage() << endl;
+   std::cout << this->getVisitingMessage() << std::endl;
 }
 
 
-string Place::getVisitingMessage()
+std::string Place::getVisitingMessage()
 {
-   return m_name + " (" + to_string(m_coordinates.x) + ", " + to_string(m_coordinates.y) + ").";
+   return m_name + " (" + std::to_string(m_coordinates.x) + ", " + std::to_string(m_coordinates.y) + ").";
 }

@@ -3,7 +3,6 @@
 
 #include "person.hpp"
 
-using namespace std;
 
 
 std::string Vehicle::getColorCode()
@@ -38,7 +37,7 @@ void Vehicle::enter(Person person)
    bool seatsFull = (m_persons.size() >= m_numberOfSeats);
    if (seatsFull)
    {
-      cout << "All Seats already taken." << std::endl;
+      std::cout << "All Seats already taken." << std::endl;
       std::cout << "\033[0m";
       return;
    }
@@ -55,7 +54,7 @@ void Vehicle::enter(Person person)
       person.greet(passanger);
    }
 
-   cout << "======================" << endl;
+   std::cout << "======================" << std::endl;
 
    // append person to passangers
    m_persons.push_back(person);

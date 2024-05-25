@@ -3,8 +3,6 @@
 
 #include <string>
 
-using namespace std;
-
 
 enum class Nationality
 {
@@ -18,7 +16,7 @@ enum class Nationality
 class Person
 {
 public:
-   Person(string name, Nationality nationality)
+   Person(std::string name, Nationality nationality)
    : m_name(name)
    , m_nationality(nationality)
    {}
@@ -28,10 +26,10 @@ public:
 
    void greet(Person person);
 
-   string getName();
+   std::string getName();
 
 private:
-   string m_name;
+   std::string m_name;
    Nationality m_nationality;
 };
 

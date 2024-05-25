@@ -1,6 +1,5 @@
 #include <iostream>
 
-using namespace std;
 
 // Base class
 class Shape
@@ -63,12 +62,12 @@ int main()
    Triangle Tria(5.0, 7.0);
 
    // Print the area of the object.
-   cout << "Total area Rect: " << Rect.getArea() << endl;
-   cout << "Total area Tria: " << Tria.getArea() << endl;
+   std::cout << "Total area Rect: " << Rect.getArea() << std::endl;
+   std::cout << "Total area Tria: " << Tria.getArea() << std::endl;
 
    //Zugriff auf funktionen der Elternklasse
    Rect.setHeight(10);
-   cout << "Total area: " << Rect.getArea() << endl;
+   std::cout << "Total area: " << Rect.getArea() << std::endl;
 
    return 0;
 }
