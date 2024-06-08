@@ -15,12 +15,17 @@ public:
       std::cout << "constMethod" << std::endl;
    }
 
-   void myMethod(const MyClass& inputClass) const
+   void myMethod(const MyClass& inputClass) const //constant method
    {
       inputClass = MyClass{};      // does not work, since inputClass is const
       inputClass.setMyValue();  // does not work since inputClass is const
       this->m_value = 0;  // does not work, since myMethod is const
       inputClass.constMethod();  // works
+   }
+
+   const int* getPointer() const //constant method with constant return type
+   {
+      return &m_value;
    }
 
 
@@ -35,14 +40,21 @@ int main()
 
    // PI = 3.1415; // ERROR!
    std::cout << PI << std::endl;
-   
+
+   MyClass myMyClass;
+   const int* valuePtr = myMyClass.getPointer(); //return type is const, so can only be assigned to const var
+   // *valuePtr = 5; //Compile error since const
+
    // const always refers to instance left to it. If there is nothing to the left, then to the right.
    const MyClass* myMyClass1;           // const points to MyClass, so instance is constant
    //myMyClass1->setMyValue(3);    // ERROR
 
+
+
    MyClass const* myMyClass2;           // identical to statement above, should not be written this way
    MyClass* const myMyClass3();         // const points to the pointer *, so the pointer is constant, not the instance
    const MyClass* const myMyClass4();   // both, pointer and instance are constant
+
 
    return 0;
 }
