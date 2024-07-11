@@ -4,7 +4,7 @@
 
 int main()
 {
-    std::string apiKey = "586cec33a78ef8f6fc94651a39180d83";  // Replace with your actual API key
+    std::string apiKey = "Token";  // Replace with your actual API key
     RealWeatherApi weatherApi(apiKey);
     WeatherService service(&weatherApi);
 
